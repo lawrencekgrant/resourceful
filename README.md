@@ -25,7 +25,7 @@
 
 # Installation
 
-``` bash 
+``` bash
 $ [sudo] npm install resourceful
 ```
 
@@ -41,7 +41,7 @@ var Creature = resourceful.define('creature', function () {
   // Specify a storage engine
   //
   this.use('couchdb');
-  
+
   //
   // Specify some properties with validation
   //
@@ -65,13 +65,18 @@ Creature.prototype.feed = function (food) {
 ```
 <a name="engines"></a>
 
-# Engines 
+# Engines
 
 ### Documentation
+
+See the [wiki](https://github.com/flatiron/resourceful/wiki) for more documention.
 
  * [Engines Usage](https://github.com/flatiron/resourceful/wiki/Engines-Usage)
  * [Engine Constructor](https://github.com/flatiron/resourceful/wiki/Engine-Constructor)
  * [Engine Caching](https://github.com/flatiron/resourceful/wiki/Engine-Caching)
+ * [Relational Resources](https://github.com/flatiron/resourceful/wiki/Relational-Resources)
+ * [Hooks and Events](https://github.com/flatiron/resourceful/wiki/Hooks-and-Events)
+
 
 # API
 
@@ -82,7 +87,7 @@ These methods are available on all user-defined resource constructors, as well a
 * `Resource.update(id, properties, [callback])`: Update a resource with properties.
 * `Resource.destroy(id, [callback])`: Destroy a resource by `id`.
 * `Resource.all([callback])`: Fetches all resources of this type.
-* `Resource.find(properties, [callback])`: Find all resources of this type which satisfy `obj` conditions.
+* `Resource.find(properties, [callback])`: Find all resources of this type which satisfy `properties` conditions.
 * `Resource.save(inst, [callback])`: Saves the specified resource instance `inst` by overwriting all properties.
 * `Resource.create(properties, [callback])`: Creates a new instance of the Resource with the specified `properties`.
 * `Resource.new(properties)`: Instantiates a new instance of the Resource with the `properties`.

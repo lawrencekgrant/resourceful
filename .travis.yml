@@ -11,6 +11,7 @@ notifications:
 
 services:
   - couchdb
+  - redis-server
 
 before_script:
   - curl -X PUT localhost:5984/myapp_test
